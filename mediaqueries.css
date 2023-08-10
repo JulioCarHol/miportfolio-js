@@ -6,6 +6,9 @@
   .about-containers {
     flex-wrap: wrap;
   }
+  #contact{
+    height: 20vh;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -22,6 +25,7 @@
   #profile,
   .section-container {
     display: block;
+    height: auto;
   }
   .arrow {
     display: none;
@@ -46,6 +50,9 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  #contact{
+    height: 45vh;
   }
 }
 
@@ -101,5 +108,8 @@
   }
   .text-container {
     text-align: justify;
+  }
+  #contact{
+    height: 40vh;
   }
 }
