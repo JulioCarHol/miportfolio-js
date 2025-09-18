@@ -1,18 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="assets/icon.png">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio JulioC</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Julio Cardenas</div>
-      <div>
+
+<head>
+  <link rel="icon" href="assets/icon.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio JulioC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Julio Cardenas</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Julio Cardenas</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">Sobre mí</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Habilidades</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Proyectos</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contactos</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__text">
+      <p class="section__text__p1">Hola, soy</p>
+      <h1 class="title">Julio Cardenas</h1>
+      <p class="section__text__p2">Programador</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Cv_JulioCardenas.pdf', '_blank')">
+          Mi CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contacto
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/juliocardenash/'" />
+        <img src="./assets/github.png" alt="My Github" class="icon"
+          onclick="location.href='https://github.com/JulioCarHol'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h1 class="title">Sobre mí</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <p>
+              Colombia<br />+57 3024187013<br />juliocardenas_003@hotmail.com
+            </p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Me gusta todo lo relacionado a tecnología y disfruto estar en
+            constante aprendizaje y búsqueda de nuevos conocimientos. Tengo
+            habilidades en el desarrollo web, especialmente en el frontend,
+            aunque también tengo conocimientos en el área backend para
+            complementar mis conocimientos fullstack. Desde mediados del 2022
+            he estado dedicado a la programación y he complementado mi
+            formación participando en cursos y bootcamps para ampliar mis
+            conocimientos. He aplicado estos conocimientos en proyectos
+            personales como forma de práctica y consolidación. Actualmente
+            busco una oportunidad laboral donde pueda aplicar mis habilidades
+            y conocimientos adquiridos. Me gustaria ser parte de un equipo de
+            trabajo donde pueda contribuir con mis conocimientos y pueda
+            crecer profesionalmente.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+
+
+  <section id="experience">
+    <h1 class="title">Mis conocimientos</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Html</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Css</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Sass</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Angular</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>.Net</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Laravel</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MySQL</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PostgreSQL</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SqlServer</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Kotlin</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Maui</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+
+
+  <section id="projects">
+    <h1 class="title">Mis proyectos</h1>
+    <div class="list-projects">
+
+      <div class="details-container color-container">
+        <div class="project-gallery">
+          <div class="gallery-container">
+            <img src="./assets/project-1.jpg" alt="Serotonina - Vista 1" class="project-img active" />
+            <!-- Agregar más imágenes cuando estén disponibles -->
+          </div>
+          <div class="gallery-navigation">
+            <button class="gallery-btn prev-btn" onclick="changeImage(0, -1)">❮</button>
+            <div class="gallery-dots">
+              <span class="dot active" onclick="currentImage(0, 1)"></span>
+            </div>
+            <button class="gallery-btn next-btn" onclick="changeImage(0, 1)">❯</button>
+          </div>
+        </div>
+        <p class="projectslanguages">HTML-CSS-JS-JAVA-MYSQL</p>
+        <h2 class="experience-sub-title project-title">Serotonina</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/JulioCarHol/Serotonina'">
+            Github
+          </button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://juliocarhol.github.io/Serotonina/'">
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="project-gallery">
+          <div class="gallery-container">
+            <img src="./assets/RestauranteJuls/1.png" alt="Restaurante Juls - Página de Inicio" class="project-img" />
+            <img src="./assets/RestauranteJuls/2.png" alt="Restaurante Juls - Menú de Platos" class="project-img" />
+            <img src="./assets/RestauranteJuls/3.png" alt="Restaurante Juls - Carrito de Compras" class="project-img" />
+            <img src="./assets/RestauranteJuls/4.png" alt="Restaurante Juls - Proceso de Pedido" class="project-img" />
+            <img src="./assets/RestauranteJuls/5.png" alt="Restaurante Juls - Información del Restaurante"
+              class="project-img" />
+            <img src="./assets/RestauranteJuls/6.png" alt="Restaurante Juls - Contacto y Ubicación"
+              class="project-img" />
+          </div>
+          <div class="gallery-navigation">
+            <button class="gallery-btn prev-btn" onclick="changeImage(1, -1)">❮</button>
+            <div class="gallery-dots">
+              <span class="dot active" onclick="currentImage(1, 1)"></span>
+              <span class="dot" onclick="currentImage(1, 2)"></span>
+              <span class="dot" onclick="currentImage(1, 3)"></span>
+              <span class="dot" onclick="currentImage(1, 4)"></span>
+              <span class="dot" onclick="currentImage(1, 5)"></span>
+              <span class="dot" onclick="currentImage(1, 6)"></span>
+              <span class="dot" onclick="currentImage(1, 7)"></span>
+            </div>
+            <button class="gallery-btn next-btn" onclick="changeImage(1, 1)">❯</button>
+          </div>
+        </div>
+        <p class="projectslanguages">HTML-SCSS-JS-JQUERY</p>
+        <h2 class="experience-sub-title project-title">Restaurante Juls</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/JulioCarHol/Ecommerce-Restaurante'">
+            Github
+          </button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://juliocarhol.github.io/Ecommerce-Restaurante/'">
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="project-gallery">
+          <div class="gallery-container">
+            <img src="./assets/JulJobs/1.png" alt="JobJuls - Dashboard Principal" class="project-img" />
+            <img src="./assets/JulJobs/2.png" alt="JobJuls - Panel de Control" class="project-img" />
+            <img src="./assets/JulJobs/3.png" alt="JobJuls - Gestión de Usuarios" class="project-img" />
+            <img src="./assets/JulJobs/4.png" alt="JobJuls - Lista de Ofertas" class="project-img" />
+            <img src="./assets/JulJobs/5.png" alt="JobJuls - Perfil de Usuario" class="project-img" />
+            <img src="./assets/JulJobs/6.png" alt="JobJuls - Búsqueda Avanzada" class="project-img" />
+            <img src="./assets/JulJobs/7.png" alt="JobJuls - Configuraciones" class="project-img" />
+            <img src="./assets/JulJobs/8.png" alt="JobJuls - Estadísticas" class="project-img" />
+            <img src="./assets/JulJobs/9.png" alt="JobJuls - Reportes" class="project-img" />
+            <img src="./assets/JulJobs/10.png" alt="JobJuls - Gestión de Empresas" class="project-img" />
+            <img src="./assets/JulJobs/11.png" alt="JobJuls - Panel Administrativo" class="project-img" />
+            <img src="./assets/JulJobs/12.png" alt="JobJuls - Aplicaciones" class="project-img" />
+            <img src="./assets/JulJobs/13.png" alt="JobJuls - Vista Completa" class="project-img" />
+          </div>
+          <div class="gallery-navigation">
+            <button class="gallery-btn prev-btn" onclick="changeImage(2, -1)">❮</button>
+            <div class="gallery-dots">
+              <span class="dot active" onclick="currentImage(2, 1)"></span>
+              <span class="dot" onclick="currentImage(2, 2)"></span>
+              <span class="dot" onclick="currentImage(2, 3)"></span>
+              <span class="dot" onclick="currentImage(2, 4)"></span>
+              <span class="dot" onclick="currentImage(2, 5)"></span>
+              <span class="dot" onclick="currentImage(2, 6)"></span>
+              <span class="dot" onclick="currentImage(2, 7)"></span>
+              <span class="dot" onclick="currentImage(2, 8)"></span>
+              <span class="dot" onclick="currentImage(2, 9)"></span>
+              <span class="dot" onclick="currentImage(2, 10)"></span>
+              <span class="dot" onclick="currentImage(2, 11)"></span>
+              <span class="dot" onclick="currentImage(2, 12)"></span>
+              <span class="dot" onclick="currentImage(2, 13)"></span>
+              <span class="dot" onclick="currentImage(2, 14)"></span>
+            </div>
+            <button class="gallery-btn next-btn" onclick="changeImage(2, 1)">❯</button>
+          </div>
+        </div>
+        <p class="projectslanguages">HTML-CSS-JS-LARAVEL-MYSQL</p>
+        <h2 class="experience-sub-title project-title">JobJuls</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/JulioCarHol/proyecto-bolsajobjuls'">
+            Github
+          </button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="project-gallery">
+          <div class="gallery-container">
+            <img src="./assets/project-3.jpg" alt="Viajando por Colombia - Vista 1" class="project-img active" />
+            <!-- Agregar más imágenes cuando estén disponibles -->
+          </div>
+          <div class="gallery-navigation">
+            <button class="gallery-btn prev-btn" onclick="changeImage(3, -1)">❮</button>
+            <div class="gallery-dots">
+              <span class="dot active" onclick="currentImage(3, 1)"></span>
+            </div>
+            <button class="gallery-btn next-btn" onclick="changeImage(3, 1)">❯</button>
+          </div>
+        </div>
+        <p class="projectslanguages">REACT-JAVASCRIPT-NODE-MONGODB</p>
+        <h2 class="experience-sub-title project-title">Viajando por Colombia</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/JulioCarHol/TransportesJul-SENA'">
+            Github
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <div>
+
+
+  </div>
+  <section id="contact" class="contact">
+    <h1 class="title">Contáctame</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p>
+          <a href="mailto:juliocardenas_003@hotmail.com">juliocardenas_003@hotmail.com</a>
+        </p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p>
+          <a href="https://www.linkedin.com/in/juliocardenash/">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#experience">Habilidades</a></li>
@@ -21,569 +379,23 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Julio Cardenas</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">Sobre mí</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Habilidades</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Proyectos</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contactos</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__text">
-        <p class="section__text__p1">Hola, soy</p>
-        <h1 class="title">Julio Cardenas</h1>
-        <p class="section__text__p2">Programador</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Cv_JulioCardenas.pdf', '_blank')"
-          >
-            Mi CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contacto
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/juliocardenash/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github"
-            class="icon"
-            onclick="location.href='https://github.com/JulioCarHol'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <h1 class="title">Sobre mí</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <p>
-                Colombia<br />+57 3024187013<br />juliocardenas_003@hotmail.com
-              </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Me gusta todo lo relacionado a tecnología y disfruto estar en
-              constante aprendizaje y búsqueda de nuevos conocimientos. Tengo
-              habilidades en el desarrollo web, especialmente en el frontend,
-              aunque también tengo conocimientos en el área backend para
-              complementar mis conocimientos fullstack. Desde mediados del 2022
-              he estado dedicado a la programación y he complementado mi
-              formación participando en cursos y bootcamps para ampliar mis
-              conocimientos. He aplicado estos conocimientos en proyectos
-              personales como forma de práctica y consolidación. Actualmente
-              busco una oportunidad laboral donde pueda aplicar mis habilidades
-              y conocimientos adquiridos. Me gustaria ser parte de un equipo de
-              trabajo donde pueda contribuir con mis conocimientos y pueda
-              crecer profesionalmente.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+    <p>Hecho por Julio Cardenas</p>
+  </footer>
 
-
-    <section id="experience">
-      <h1 class="title">Mis conocimientos</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TailwindCss</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AJAX</h3>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JQUERY</h3>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-
-   
-    <section id="projects">
-      <h1 class="title">Mis proyectos</h1>
-      <div class="list-projects">
-
-        <div class="details-container color-container">
-          <div class="project-gallery">
-            <div class="gallery-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Serotonina - Vista 1"
-                class="project-img active"
-              />
-              <!-- Agregar más imágenes cuando estén disponibles -->
-            </div>
-            <div class="gallery-navigation">
-              <button class="gallery-btn prev-btn" onclick="changeImage(0, -1)">❮</button>
-              <div class="gallery-dots">
-                <span class="dot active" onclick="currentImage(0, 1)"></span>
-              </div>
-              <button class="gallery-btn next-btn" onclick="changeImage(0, 1)">❯</button>
-            </div>
-          </div>
-          <p class="projectslanguages">HTML-CSS-JS-JAVA-MYSQL</p>
-          <h2 class="experience-sub-title project-title">Serotonina</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/JulioCarHol/Serotonina'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://juliocarhol.github.io/Serotonina/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container">
-          <div class="project-gallery">
-            <div class="gallery-container">
-              <img
-                src="./assets/RestauranteJuls/1.png"
-                alt="Restaurante Juls - Página de Inicio"
-                class="project-img"
-              />
-              <img
-                src="./assets/RestauranteJuls/2.png"
-                alt="Restaurante Juls - Menú de Platos"
-                class="project-img"
-              />
-              <img
-                src="./assets/RestauranteJuls/3.png"
-                alt="Restaurante Juls - Carrito de Compras"
-                class="project-img"
-              />
-              <img
-                src="./assets/RestauranteJuls/4.png"
-                alt="Restaurante Juls - Proceso de Pedido"
-                class="project-img"
-              />
-              <img
-                src="./assets/RestauranteJuls/5.png"
-                alt="Restaurante Juls - Información del Restaurante"
-                class="project-img"
-              />
-              <img
-                src="./assets/RestauranteJuls/6.png"
-                alt="Restaurante Juls - Contacto y Ubicación"
-                class="project-img"
-              />
-            </div>
-            <div class="gallery-navigation">
-              <button class="gallery-btn prev-btn" onclick="changeImage(1, -1)">❮</button>
-              <div class="gallery-dots">
-                <span class="dot active" onclick="currentImage(1, 1)"></span>
-                <span class="dot" onclick="currentImage(1, 2)"></span>
-                <span class="dot" onclick="currentImage(1, 3)"></span>
-                <span class="dot" onclick="currentImage(1, 4)"></span>
-                <span class="dot" onclick="currentImage(1, 5)"></span>
-                <span class="dot" onclick="currentImage(1, 6)"></span>
-                <span class="dot" onclick="currentImage(1, 7)"></span>
-              </div>
-              <button class="gallery-btn next-btn" onclick="changeImage(1, 1)">❯</button>
-            </div>
-          </div>
-          <p class="projectslanguages">HTML-SCSS-JS-JQUERY</p>
-          <h2 class="experience-sub-title project-title">Restaurante Juls</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/JulioCarHol/Ecommerce-Restaurante'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://juliocarhol.github.io/Ecommerce-Restaurante/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container">
-          <div class="project-gallery">
-            <div class="gallery-container">
-              <img
-                src="./assets/JulJobs/1.png"
-                alt="JobJuls - Dashboard Principal"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/2.png"
-                alt="JobJuls - Panel de Control"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/3.png"
-                alt="JobJuls - Gestión de Usuarios"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/4.png"
-                alt="JobJuls - Lista de Ofertas"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/5.png"
-                alt="JobJuls - Perfil de Usuario"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/6.png"
-                alt="JobJuls - Búsqueda Avanzada"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/7.png"
-                alt="JobJuls - Configuraciones"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/8.png"
-                alt="JobJuls - Estadísticas"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/9.png"
-                alt="JobJuls - Reportes"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/10.png"
-                alt="JobJuls - Gestión de Empresas"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/11.png"
-                alt="JobJuls - Panel Administrativo"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/12.png"
-                alt="JobJuls - Aplicaciones"
-                class="project-img"
-              />
-              <img
-                src="./assets/JulJobs/13.png"
-                alt="JobJuls - Vista Completa"
-                class="project-img"
-              />
-            </div>
-            <div class="gallery-navigation">
-              <button class="gallery-btn prev-btn" onclick="changeImage(2, -1)">❮</button>
-              <div class="gallery-dots">
-                <span class="dot active" onclick="currentImage(2, 1)"></span>
-                <span class="dot" onclick="currentImage(2, 2)"></span>
-                <span class="dot" onclick="currentImage(2, 3)"></span>
-                <span class="dot" onclick="currentImage(2, 4)"></span>
-                <span class="dot" onclick="currentImage(2, 5)"></span>
-                <span class="dot" onclick="currentImage(2, 6)"></span>
-                <span class="dot" onclick="currentImage(2, 7)"></span>
-                <span class="dot" onclick="currentImage(2, 8)"></span>
-                <span class="dot" onclick="currentImage(2, 9)"></span>
-                <span class="dot" onclick="currentImage(2, 10)"></span>
-                <span class="dot" onclick="currentImage(2, 11)"></span>
-                <span class="dot" onclick="currentImage(2, 12)"></span>
-                <span class="dot" onclick="currentImage(2, 13)"></span>
-                <span class="dot" onclick="currentImage(2, 14)"></span>
-              </div>
-              <button class="gallery-btn next-btn" onclick="changeImage(2, 1)">❯</button>
-            </div>
-          </div>
-          <p class="projectslanguages">HTML-CSS-JS-LARAVEL-MYSQL</p>
-          <h2 class="experience-sub-title project-title">JobJuls</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/JulioCarHol/proyecto-bolsajobjuls'"
-            >
-              Github
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container">
-          <div class="project-gallery">
-            <div class="gallery-container">
-              <img
-                src="./assets/project-3.jpg"
-                alt="Viajando por Colombia - Vista 1"
-                class="project-img active"
-              />
-              <!-- Agregar más imágenes cuando estén disponibles -->
-            </div>
-            <div class="gallery-navigation">
-              <button class="gallery-btn prev-btn" onclick="changeImage(3, -1)">❮</button>
-              <div class="gallery-dots">
-                <span class="dot active" onclick="currentImage(3, 1)"></span>
-              </div>
-              <button class="gallery-btn next-btn" onclick="changeImage(3, 1)">❯</button>
-            </div>
-          </div>
-          <p class="projectslanguages">REACT-JAVASCRIPT-NODE-MONGODB</p>
-          <h2 class="experience-sub-title project-title">Viajando por Colombia</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/JulioCarHol/TransportesJul-SENA'"
-            >
-              Github
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-
-<div>
-
-  
-</div>
-  <section id="contact" class="contact">
-    <h1 class="title">Contáctame</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img
-          src="./assets/email.png"
-          alt="Email icon"
-          class="icon contact-icon email-icon"
-        />
-        <p>
-          <a href="mailto:juliocardenas_003@hotmail.com"
-            >juliocardenas_003@hotmail.com</a
-          >
-        </p>
-      </div>
-      <div class="contact-info-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="LinkedIn icon"
-          class="icon contact-icon"
-        />
-        <p>
-          <a href="https://www.linkedin.com/in/juliocardenash/">LinkedIn</a>
-        </p>
+  <!-- Modal para imagen completa -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <button class="modal-navigation modal-prev">❮</button>
+      <img id="modalImage" class="modal-image" src="" alt="Imagen ampliada">
+      <button class="modal-navigation modal-next">❯</button>
+      <div class="modal-info">
+        <p id="modalInfo">Información de la imagen</p>
       </div>
     </div>
+  </div>
 
-      </div>
-    </section>
+  <script src="script.js"></script>
+</body>
 
-
-
-
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#experience">Habilidades</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Hecho por Julio Cardenas</p>
-    </footer>
-
-    <!-- Modal para imagen completa -->
-    <div id="imageModal" class="image-modal">
-      <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <button class="modal-navigation modal-prev">❮</button>
-        <img id="modalImage" class="modal-image" src="" alt="Imagen ampliada">
-        <button class="modal-navigation modal-next">❯</button>
-        <div class="modal-info">
-          <p id="modalInfo">Información de la imagen</p>
-        </div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
 </html>
