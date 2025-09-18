@@ -282,12 +282,22 @@
       <div class="list-projects">
 
         <div class="details-container color-container">
-          <div class="article-container">
-            <img
-              src="./assets/project-1.jpg"
-              alt="Project 1"
-              class="project-img"
-            />
+          <div class="project-gallery">
+            <div class="gallery-container">
+              <img
+                src="./assets/project-1.jpg"
+                alt="Serotonina - Vista 1"
+                class="project-img active"
+              />
+              <!-- Agregar más imágenes cuando estén disponibles -->
+            </div>
+            <div class="gallery-navigation">
+              <button class="gallery-btn prev-btn" onclick="changeImage(0, -1)">❮</button>
+              <div class="gallery-dots">
+                <span class="dot active" onclick="currentImage(0, 1)"></span>
+              </div>
+              <button class="gallery-btn next-btn" onclick="changeImage(0, 1)">❯</button>
+            </div>
           </div>
           <p class="projectslanguages">HTML-CSS-JS-JAVA-MYSQL</p>
           <h2 class="experience-sub-title project-title">Serotonina</h2>
@@ -308,12 +318,52 @@
         </div>
 
         <div class="details-container color-container">
-          <div class="article-container">
-            <img
-              src="./assets/project-2.jpg"
-              alt="Project 2"
-              class="project-img"
-            />
+          <div class="project-gallery">
+            <div class="gallery-container">
+              <img
+                src="./assets/RestauranteJuls/1.png"
+                alt="Restaurante Juls - Página de Inicio"
+                class="project-img"
+              />
+              <img
+                src="./assets/RestauranteJuls/2.png"
+                alt="Restaurante Juls - Menú de Platos"
+                class="project-img"
+              />
+              <img
+                src="./assets/RestauranteJuls/3.png"
+                alt="Restaurante Juls - Carrito de Compras"
+                class="project-img"
+              />
+              <img
+                src="./assets/RestauranteJuls/4.png"
+                alt="Restaurante Juls - Proceso de Pedido"
+                class="project-img"
+              />
+              <img
+                src="./assets/RestauranteJuls/5.png"
+                alt="Restaurante Juls - Información del Restaurante"
+                class="project-img"
+              />
+              <img
+                src="./assets/RestauranteJuls/6.png"
+                alt="Restaurante Juls - Contacto y Ubicación"
+                class="project-img"
+              />
+            </div>
+            <div class="gallery-navigation">
+              <button class="gallery-btn prev-btn" onclick="changeImage(1, -1)">❮</button>
+              <div class="gallery-dots">
+                <span class="dot active" onclick="currentImage(1, 1)"></span>
+                <span class="dot" onclick="currentImage(1, 2)"></span>
+                <span class="dot" onclick="currentImage(1, 3)"></span>
+                <span class="dot" onclick="currentImage(1, 4)"></span>
+                <span class="dot" onclick="currentImage(1, 5)"></span>
+                <span class="dot" onclick="currentImage(1, 6)"></span>
+                <span class="dot" onclick="currentImage(1, 7)"></span>
+              </div>
+              <button class="gallery-btn next-btn" onclick="changeImage(1, 1)">❯</button>
+            </div>
           </div>
           <p class="projectslanguages">HTML-SCSS-JS-JQUERY</p>
           <h2 class="experience-sub-title project-title">Restaurante Juls</h2>
@@ -334,12 +384,94 @@
         </div>
 
         <div class="details-container color-container">
-          <div class="article-container">
-            <img
-              src="./assets/jobjuls.jpg"
-              alt="JobJuls"
-              class="project-img3"
-            />
+          <div class="project-gallery">
+            <div class="gallery-container">
+              <img
+                src="./assets/JulJobs/1.png"
+                alt="JobJuls - Dashboard Principal"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/2.png"
+                alt="JobJuls - Panel de Control"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/3.png"
+                alt="JobJuls - Gestión de Usuarios"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/4.png"
+                alt="JobJuls - Lista de Ofertas"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/5.png"
+                alt="JobJuls - Perfil de Usuario"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/6.png"
+                alt="JobJuls - Búsqueda Avanzada"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/7.png"
+                alt="JobJuls - Configuraciones"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/8.png"
+                alt="JobJuls - Estadísticas"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/9.png"
+                alt="JobJuls - Reportes"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/10.png"
+                alt="JobJuls - Gestión de Empresas"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/11.png"
+                alt="JobJuls - Panel Administrativo"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/12.png"
+                alt="JobJuls - Aplicaciones"
+                class="project-img"
+              />
+              <img
+                src="./assets/JulJobs/13.png"
+                alt="JobJuls - Vista Completa"
+                class="project-img"
+              />
+            </div>
+            <div class="gallery-navigation">
+              <button class="gallery-btn prev-btn" onclick="changeImage(2, -1)">❮</button>
+              <div class="gallery-dots">
+                <span class="dot active" onclick="currentImage(2, 1)"></span>
+                <span class="dot" onclick="currentImage(2, 2)"></span>
+                <span class="dot" onclick="currentImage(2, 3)"></span>
+                <span class="dot" onclick="currentImage(2, 4)"></span>
+                <span class="dot" onclick="currentImage(2, 5)"></span>
+                <span class="dot" onclick="currentImage(2, 6)"></span>
+                <span class="dot" onclick="currentImage(2, 7)"></span>
+                <span class="dot" onclick="currentImage(2, 8)"></span>
+                <span class="dot" onclick="currentImage(2, 9)"></span>
+                <span class="dot" onclick="currentImage(2, 10)"></span>
+                <span class="dot" onclick="currentImage(2, 11)"></span>
+                <span class="dot" onclick="currentImage(2, 12)"></span>
+                <span class="dot" onclick="currentImage(2, 13)"></span>
+                <span class="dot" onclick="currentImage(2, 14)"></span>
+              </div>
+              <button class="gallery-btn next-btn" onclick="changeImage(2, 1)">❯</button>
+            </div>
           </div>
           <p class="projectslanguages">HTML-CSS-JS-LARAVEL-MYSQL</p>
           <h2 class="experience-sub-title project-title">JobJuls</h2>
@@ -349,32 +481,42 @@
               onclick="location.href='https://github.com/JulioCarHol/proyecto-bolsajobjuls'"
             >
               Github
-
+            </button>
           </div>
         </div>
 
+        <div class="details-container color-container">
+          <div class="project-gallery">
+            <div class="gallery-container">
+              <img
+                src="./assets/project-3.jpg"
+                alt="Viajando por Colombia - Vista 1"
+                class="project-img active"
+              />
+              <!-- Agregar más imágenes cuando estén disponibles -->
+            </div>
+            <div class="gallery-navigation">
+              <button class="gallery-btn prev-btn" onclick="changeImage(3, -1)">❮</button>
+              <div class="gallery-dots">
+                <span class="dot active" onclick="currentImage(3, 1)"></span>
+              </div>
+              <button class="gallery-btn next-btn" onclick="changeImage(3, 1)">❯</button>
+            </div>
+          </div>
+          <p class="projectslanguages">REACT-JAVASCRIPT-NODE-MONGODB</p>
+          <h2 class="experience-sub-title project-title">Viajando por Colombia</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/JulioCarHol/TransportesJul-SENA'"
+            >
+              Github
+            </button>
+          </div>
+        </div>
 
-    <div class="details-container color-container">
-      <div class="article-container">
-        <img
-          src="./assets/project-3.jpg"
-          alt="Project 2"
-          class="project-img"
-        />
       </div>
-      <p class="projectslanguages">REACT-JAVASCRIPT-NODE-MONGODB</p>
-      <h2 class="experience-sub-title project-title">Viajando por Colombia</h2>
-      <div class="btn-container">
-        <button
-          class="btn btn-color-2 project-btn"
-          onclick="location.href='https://github.com/JulioCarHol/TransportesJul-SENA'"
-        >
-          Github
-        </button>
-      </div>
-    </div>
-
-  </section>
+    </section>
 
 
 
@@ -428,6 +570,20 @@
       </nav>
       <p>Hecho por Julio Cardenas</p>
     </footer>
+
+    <!-- Modal para imagen completa -->
+    <div id="imageModal" class="image-modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <button class="modal-navigation modal-prev">❮</button>
+        <img id="modalImage" class="modal-image" src="" alt="Imagen ampliada">
+        <button class="modal-navigation modal-next">❯</button>
+        <div class="modal-info">
+          <p id="modalInfo">Información de la imagen</p>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
