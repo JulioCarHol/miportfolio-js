@@ -1,115 +1,137 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact{
-    height: 20vh;
-  }
-}
+/* ==========================================================================
+   Responsive · 2 breakpoints (900px, 600px)
+   ========================================================================== */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
   }
-  #experience,
+
+  /* Habilidades y proyectos a una columna */
   .experience-details-container {
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
   }
-  #profile,
-  .section-container {
-    display: block;
-    height: auto;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
 
+  #projects .list-projects {
+    grid-template-columns: 1fr;
+  }
 
+  .gallery-container {
+    height: 280px;
   }
-  section {
-    margin: 0 5%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  .about-details-container {
+    grid-template-columns: 1fr;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-  #contact{
-    height: 45vh;
+
+  .text-container p {
+    max-width: 65ch;
+    margin-inline: auto;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  section {
+    padding: clamp(3.5rem, 12vh, 5rem) 1.25rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
+
+  /* Tipografía */
+  .nav-links,
+  .menu-links a {
     font-size: 1rem;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
+
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+
+  .title {
+    font-size: clamp(1.75rem, 9vw, 2.25rem);
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  #profile .title {
+    font-size: clamp(2.25rem, 11vw, 3rem);
   }
+
   .section__text__p2 {
     font-size: 1.25rem;
   }
-  .title {
-    font-size: 2rem;
+
+  /* Botones apilados a todo el ancho */
+  .btn-container {
+    flex-direction: column;
+    align-items: stretch;
   }
-  .text-container {
-    text-align: justify;
+
+  .btn {
+    width: 100%;
   }
-  #contact{
-    height: 40vh;
+
+  /* Galería más compacta */
+  .gallery-container {
+    height: 230px;
+  }
+
+  .gallery-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .gallery-dots {
+    gap: 4px;
+  }
+
+  /* Modal responsive */
+  .modal-content {
+    max-width: 95%;
+    max-height: 85%;
+  }
+
+  .modal-close {
+    top: -42px;
+    font-size: 26px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .modal-navigation {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .modal-prev {
+    left: 8px;
+  }
+
+  .modal-next {
+    right: 8px;
+  }
+
+  .modal-info {
+    bottom: -46px;
+    font-size: 13px;
+  }
+
+  /* Contacto apilado */
+  .contact-info-upper-container {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  footer .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }

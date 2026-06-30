@@ -1,401 +1,1028 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Julio Cárdenas — Desarrollador Fullstack</title>
+        <meta
+            name="description"
+            content="Portafolio de Julio Cárdenas, desarrollador web fullstack. Conoce mis proyectos, habilidades y formas de contacto."
+        />
+        <meta name="author" content="Julio Cárdenas" />
+        <meta
+            name="theme-color"
+            content="#2563eb"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="#0d1117"
+            media="(prefers-color-scheme: dark)"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Julio Cárdenas — Desarrollador Fullstack"
+        />
+        <meta
+            property="og:description"
+            content="Desarrollador web fullstack. Proyectos, habilidades y contacto."
+        />
+        <meta property="og:image" content="./assets/project-1.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="assets/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script>
+            (function () {
+                document.documentElement.classList.remove("no-js");
+                var s = localStorage.getItem("theme");
+                var t =
+                    s ||
+                    (window.matchMedia("(prefers-color-scheme: dark)").matches
+                        ? "dark"
+                        : "light");
+                document.documentElement.setAttribute("data-theme", t);
+            })();
+        </script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
+    </head>
 
-<head>
-  <link rel="icon" href="assets/icon.png">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio JulioC</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
-</head>
+    <body>
+        <nav id="desktop-nav">
+            <a href="#profile" class="logo">Julio Cardenas</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#experience">Habilidades</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <button
+                    class="theme-toggle"
+                    aria-label="Cambiar tema"
+                    aria-pressed="false"
+                    type="button"
+                >
+                    <svg
+                        class="i-sun"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                        />
+                    </svg>
+                    <svg
+                        class="i-moon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </nav>
 
-<body>
-  <nav id="desktop-nav">
-    <div class="logo">Julio Cardenas</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#experience">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Julio Cardenas</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">Sobre mí</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Habilidades</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Proyectos</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contactos</a></li>
-      </div>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__text">
-      <p class="section__text__p1">Hola, soy</p>
-      <h1 class="title">Julio Cardenas</h1>
-      <p class="section__text__p2">Programador</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/Cv_JulioCardenas.pdf', '_blank')">
-          Mi CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contacto
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/juliocardenash/'" />
-        <img src="./assets/github.png" alt="My Github" class="icon"
-          onclick="location.href='https://github.com/JulioCarHol'" />
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <h1 class="title">Sobre mí</h1>
-    <div class="section-container">
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
+        <nav id="hamburger-nav">
+            <a href="#profile" class="logo">Julio Cardenas</a>
+            <div class="hamburger-controls">
+                <button
+                    class="theme-toggle"
+                    aria-label="Cambiar tema"
+                    aria-pressed="false"
+                    type="button"
+                >
+                    <svg
+                        class="i-sun"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                        />
+                    </svg>
+                    <svg
+                        class="i-moon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                        />
+                    </svg>
+                </button>
+                <div class="hamburger-menu">
+                    <div
+                        class="hamburger-icon"
+                        onclick="toggleMenu()"
+                        role="button"
+                        aria-label="Abrir menú"
+                        tabindex="0"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-links">
+                        <ul>
+                            <li>
+                                <a href="#about" onclick="toggleMenu()"
+                                    >Sobre mí</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#experience" onclick="toggleMenu()"
+                                    >Habilidades</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#projects" onclick="toggleMenu()"
+                                    >Proyectos</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#contact" onclick="toggleMenu()"
+                                    >Contacto</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section id="profile">
+            <div class="hero-bg" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hola, soy</p>
+                <h1 class="title gradient-text">Julio Cárdenas</h1>
+                <p class="section__text__p2">Desarrollador Fullstack</p>
+                <div class="btn-container">
+                    <button
+                        class="btn btn-primary"
+                        onclick="
+                            window.open(
+                                './assets/Cv_JulioCardenas.pdf',
+                                '_blank',
+                            )
+                        "
+                    >
+                        Descargar CV
+                    </button>
+                    <button
+                        class="btn btn-ghost"
+                        onclick="location.href = './#contact'"
+                    >
+                        Contáctame
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <a
+                        href="https://www.linkedin.com/in/juliocardenash/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn"
+                        class="social-link"
+                    >
+                        <svg
+                            class="icon-svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        href="https://github.com/JulioCarHol"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="GitHub"
+                        class="social-link"
+                    >
+                        <svg
+                            class="icon-svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                <a href="#about" class="scroll-cue" aria-label="Ir a Sobre mí">
+                    <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="about">
+            <p class="section__text__p1">Conóceme un poco más</p>
+            <h1 class="title">Sobre mí</h1>
+            <div class="section-container">
+                <div class="about-details-container">
+                    <div class="details-container reveal">
+                        <div class="contact-row">
+                            <svg
+                                class="icon-svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                />
+                                <path
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                                />
+                            </svg>
+                            <span>Colombia</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg
+                                class="icon-svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                                />
+                            </svg>
+                            <span>+57 302 418 7013</span>
+                        </div>
+                        <div class="contact-row">
+                            <svg
+                                class="icon-svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                                />
+                            </svg>
+                            <a href="mailto:juliocardenas_003@hotmail.com"
+                                >juliocardenas_003@hotmail.com</a
+                            >
+                        </div>
+                    </div>
+                    <div class="text-container reveal">
+                        <p>
+                            Me gusta todo lo relacionado a tecnología y disfruto
+                            estar en constante aprendizaje y búsqueda de nuevos
+                            conocimientos. Tengo habilidades en el desarrollo
+                            web, especialmente en el frontend, aunque también
+                            tengo conocimientos en el área backend para
+                            complementar mis conocimientos fullstack. Desde
+                            mediados del 2022 he estado dedicado a la
+                            programación y he complementado mi formación
+                            participando en cursos y bootcamps para ampliar mis
+                            conocimientos. He aplicado estos conocimientos en
+                            proyectos personales como forma de práctica y
+                            consolidación. Actualmente busco una oportunidad
+                            laboral donde pueda aplicar mis habilidades y
+                            conocimientos adquiridos. Me gustaría ser parte de
+                            un equipo de trabajo donde pueda contribuir con mis
+                            conocimientos y pueda crecer profesionalmente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <p class="section__text__p1">Explora mi</p>
+            <h1 class="title">Mis conocimientos</h1>
+            <div class="experience-details-container">
+                <div class="skills-group reveal">
+                    <h3 class="skills-cat">Frontend</h3>
+                    <ul class="skill-pills">
+                        <li class="pill">HTML</li>
+                        <li class="pill">CSS</li>
+                        <li class="pill">Sass</li>
+                        <li class="pill">JavaScript</li>
+                        <li class="pill">Angular</li>
+                    </ul>
+                </div>
+                <div class="skills-group reveal">
+                    <h3 class="skills-cat">Backend</h3>
+                    <ul class="skill-pills">
+                        <li class="pill">Java</li>
+                        <li class="pill">.NET</li>
+                        <li class="pill">Laravel</li>
+                    </ul>
+                </div>
+                <div class="skills-group reveal">
+                    <h3 class="skills-cat">Bases de datos</h3>
+                    <ul class="skill-pills">
+                        <li class="pill">MySQL</li>
+                        <li class="pill">PostgreSQL</li>
+                        <li class="pill">SQL Server</li>
+                    </ul>
+                </div>
+                <div class="skills-group reveal">
+                    <h3 class="skills-cat">Mobile &amp; Herramientas</h3>
+                    <ul class="skill-pills">
+                        <li class="pill">Kotlin</li>
+                        <li class="pill">.NET MAUI</li>
+                        <li class="pill">Git</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#projects" class="scroll-cue" aria-label="Ir a Proyectos">
+                <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+            </a>
+        </section>
+
+        <section id="projects">
+            <p class="section__text__p1">Mis trabajos recientes</p>
+            <h1 class="title">Mis proyectos</h1>
+            <div class="list-projects">
+                <div class="details-container color-container reveal">
+                    <div class="project-gallery">
+                        <div class="gallery-container">
+                            <img
+                                src="./assets/Serotonina/1.png"
+                                alt="Serotonina - Vista 1"
+                                class="project-img active"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/Serotonina/2.png"
+                                alt="Serotonina - Vista 2"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/Serotonina/3.png"
+                                alt="Serotonina - Vista 3"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/Serotonina/4.png"
+                                alt="Serotonina - Vista 4"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/Serotonina/5.png"
+                                alt="Serotonina - Vista 5"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                        </div>
+                        <div class="gallery-navigation">
+                            <button
+                                class="gallery-btn prev-btn"
+                                onclick="changeImage(0, -1)"
+                            >
+                                ❮
+                            </button>
+                            <div class="gallery-dots">
+                                <span
+                                    class="dot active"
+                                    onclick="currentImage(0, 1)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(0, 2)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(0, 3)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(0, 4)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(0, 5)"
+                                ></span>
+                            </div>
+                            <button
+                                class="gallery-btn next-btn"
+                                onclick="changeImage(0, 1)"
+                            >
+                                ❯
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="project-title">Serotonina</h2>
+                    <ul class="tech-pills">
+                        <li class="pill">HTML</li>
+                        <li class="pill">CSS</li>
+                        <li class="pill">JS</li>
+                        <li class="pill">Java</li>
+                        <li class="pill">MySQL</li>
+                    </ul>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-ghost"
+                            onclick="
+                                location.href =
+                                    'https://github.com/JulioCarHol/Serotonina'
+                            "
+                        >
+                            Código
+                        </button>
+                        <button
+                            class="btn btn-primary"
+                            onclick="
+                                location.href =
+                                    'https://juliocarhol.github.io/Serotonina/'
+                            "
+                        >
+                            Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="details-container color-container reveal">
+                    <div class="project-gallery">
+                        <div class="gallery-container">
+                            <img
+                                src="./assets/RestauranteJuls/1.png"
+                                alt="Restaurante Juls - Página de Inicio"
+                                class="project-img"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/RestauranteJuls/2.png"
+                                alt="Restaurante Juls - Menú de Platos"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/RestauranteJuls/3.png"
+                                alt="Restaurante Juls - Carrito de Compras"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/RestauranteJuls/4.png"
+                                alt="Restaurante Juls - Proceso de Pedido"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/RestauranteJuls/5.png"
+                                alt="Restaurante Juls - Información del Restaurante"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/RestauranteJuls/6.png"
+                                alt="Restaurante Juls - Contacto y Ubicación"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                        </div>
+                        <div class="gallery-navigation">
+                            <button
+                                class="gallery-btn prev-btn"
+                                onclick="changeImage(1, -1)"
+                            >
+                                ❮
+                            </button>
+                            <div class="gallery-dots">
+                                <span
+                                    class="dot active"
+                                    onclick="currentImage(1, 1)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(1, 2)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(1, 3)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(1, 4)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(1, 5)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(1, 6)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(1, 7)"
+                                ></span>
+                            </div>
+                            <button
+                                class="gallery-btn next-btn"
+                                onclick="changeImage(1, 1)"
+                            >
+                                ❯
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="project-title">Restaurante Juls</h2>
+                    <ul class="tech-pills">
+                        <li class="pill">HTML</li>
+                        <li class="pill">SCSS</li>
+                        <li class="pill">JS</li>
+                        <li class="pill">jQuery</li>
+                    </ul>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-ghost"
+                            onclick="
+                                location.href =
+                                    'https://github.com/JulioCarHol/Ecommerce-Restaurante'
+                            "
+                        >
+                            Código
+                        </button>
+                        <button
+                            class="btn btn-primary"
+                            onclick="
+                                location.href =
+                                    'https://juliocarhol.github.io/Ecommerce-Restaurante/'
+                            "
+                        >
+                            Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="details-container color-container reveal">
+                    <div class="project-gallery">
+                        <div class="gallery-container">
+                            <img
+                                src="./assets/JulJobs/1.png"
+                                alt="JobJuls - Dashboard Principal"
+                                class="project-img"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/2.png"
+                                alt="JobJuls - Panel de Control"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/3.png"
+                                alt="JobJuls - Gestión de Usuarios"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/4.png"
+                                alt="JobJuls - Lista de Ofertas"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/5.png"
+                                alt="JobJuls - Perfil de Usuario"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/6.png"
+                                alt="JobJuls - Búsqueda Avanzada"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/7.png"
+                                alt="JobJuls - Configuraciones"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/8.png"
+                                alt="JobJuls - Estadísticas"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/9.png"
+                                alt="JobJuls - Reportes"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/10.png"
+                                alt="JobJuls - Gestión de Empresas"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/11.png"
+                                alt="JobJuls - Panel Administrativo"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/12.png"
+                                alt="JobJuls - Aplicaciones"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                            <img
+                                src="./assets/JulJobs/13.png"
+                                alt="JobJuls - Vista Completa"
+                                class="project-img"
+                                loading="lazy"
+                                width="800"
+                                height="500"
+                            />
+                        </div>
+                        <div class="gallery-navigation">
+                            <button
+                                class="gallery-btn prev-btn"
+                                onclick="changeImage(2, -1)"
+                            >
+                                ❮
+                            </button>
+                            <div class="gallery-dots">
+                                <span
+                                    class="dot active"
+                                    onclick="currentImage(2, 1)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 2)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 3)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 4)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 5)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 6)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 7)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 8)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 9)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 10)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 11)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 12)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 13)"
+                                ></span>
+                                <span
+                                    class="dot"
+                                    onclick="currentImage(2, 14)"
+                                ></span>
+                            </div>
+                            <button
+                                class="gallery-btn next-btn"
+                                onclick="changeImage(2, 1)"
+                            >
+                                ❯
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="project-title">JobJuls</h2>
+                    <ul class="tech-pills">
+                        <li class="pill">HTML</li>
+                        <li class="pill">CSS</li>
+                        <li class="pill">JS</li>
+                        <li class="pill">Laravel</li>
+                        <li class="pill">MySQL</li>
+                    </ul>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-ghost"
+                            onclick="
+                                location.href =
+                                    'https://github.com/JulioCarHol/proyecto-bolsajobjuls'
+                            "
+                        >
+                            Código
+                        </button>
+                    </div>
+                </div>
+
+                <div class="details-container color-container reveal">
+                    <div class="project-gallery">
+                        <div class="gallery-container">
+                            <img
+                                src="./assets/project-3.jpg"
+                                alt="Viajando por Colombia - Vista 1"
+                                class="project-img active"
+                                width="800"
+                                height="500"
+                            />
+                        </div>
+                        <div class="gallery-navigation">
+                            <button
+                                class="gallery-btn prev-btn"
+                                onclick="changeImage(3, -1)"
+                            >
+                                ❮
+                            </button>
+                            <div class="gallery-dots">
+                                <span
+                                    class="dot active"
+                                    onclick="currentImage(3, 1)"
+                                ></span>
+                            </div>
+                            <button
+                                class="gallery-btn next-btn"
+                                onclick="changeImage(3, 1)"
+                            >
+                                ❯
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="project-title">Viajando por Colombia</h2>
+                    <ul class="tech-pills">
+                        <li class="pill">React</li>
+                        <li class="pill">JavaScript</li>
+                        <li class="pill">Node</li>
+                        <li class="pill">MongoDB</li>
+                    </ul>
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-ghost"
+                            onclick="
+                                location.href =
+                                    'https://github.com/JulioCarHol/TransportesJul-SENA'
+                            "
+                        >
+                            Código
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <p class="section__text__p1">Ponte en</p>
+            <h1 class="title">Contáctame</h1>
+            <div class="contact-info-upper-container reveal">
+                <a
+                    href="mailto:juliocardenas_003@hotmail.com"
+                    class="contact-info-container"
+                >
+                    <svg
+                        class="icon-svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-label="Email"
+                        role="img"
+                    >
+                        <path
+                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                        />
+                    </svg>
+                    <span>juliocardenas_003@hotmail.com</span>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/juliocardenash/"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-info-container"
+                >
+                    <svg
+                        class="icon-svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-label="LinkedIn"
+                        role="img"
+                    >
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+                        />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#experience">Habilidades</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="#profile" class="back-to-top" aria-label="Volver arriba">
+                <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+            </a>
             <p>
-              Colombia<br />+57 3024187013<br />juliocardenas_003@hotmail.com
+                © <span id="year"></span> Julio Cárdenas · Hecho con HTML, CSS y
+                JavaScript
             </p>
-          </div>
-        </div>
-        <div class="text-container">
-          <p>
-            Me gusta todo lo relacionado a tecnología y disfruto estar en
-            constante aprendizaje y búsqueda de nuevos conocimientos. Tengo
-            habilidades en el desarrollo web, especialmente en el frontend,
-            aunque también tengo conocimientos en el área backend para
-            complementar mis conocimientos fullstack. Desde mediados del 2022
-            he estado dedicado a la programación y he complementado mi
-            formación participando en cursos y bootcamps para ampliar mis
-            conocimientos. He aplicado estos conocimientos en proyectos
-            personales como forma de práctica y consolidación. Actualmente
-            busco una oportunidad laboral donde pueda aplicar mis habilidades
-            y conocimientos adquiridos. Me gustaria ser parte de un equipo de
-            trabajo donde pueda contribuir con mis conocimientos y pueda
-            crecer profesionalmente.
-          </p>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
+        </footer>
 
-
-  <section id="experience">
-    <h1 class="title">Mis conocimientos</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Html</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Css</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Sass</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Angular</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>.Net</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Laravel</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>MySQL</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>PostgreSQL</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>SqlServer</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Kotlin</h3>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Maui</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-
-
-  <section id="projects">
-    <h1 class="title">Mis proyectos</h1>
-    <div class="list-projects">
-
-      <div class="details-container color-container">
-        <div class="project-gallery">
-          <div class="gallery-container">
-            <img src="./assets/project-1.jpg" alt="Serotonina - Vista 1" class="project-img active" />
-            <!-- Agregar más imágenes cuando estén disponibles -->
-          </div>
-          <div class="gallery-navigation">
-            <button class="gallery-btn prev-btn" onclick="changeImage(0, -1)">❮</button>
-            <div class="gallery-dots">
-              <span class="dot active" onclick="currentImage(0, 1)"></span>
+        <!-- Modal para imagen completa -->
+        <div
+            id="imageModal"
+            class="image-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Visor de imágenes del portafolio"
+        >
+            <div class="modal-content">
+                <button
+                    type="button"
+                    class="modal-close"
+                    aria-label="Cerrar visor de imágenes"
+                >
+                    &times;
+                </button>
+                <button class="modal-navigation modal-prev">❮</button>
+                <img
+                    id="modalImage"
+                    class="modal-image"
+                    src=""
+                    alt="Imagen ampliada"
+                />
+                <button class="modal-navigation modal-next">❯</button>
+                <div class="modal-info">
+                    <p id="modalInfo">Información de la imagen</p>
+                </div>
             </div>
-            <button class="gallery-btn next-btn" onclick="changeImage(0, 1)">❯</button>
-          </div>
         </div>
-        <p class="projectslanguages">HTML-CSS-JS-JAVA-MYSQL</p>
-        <h2 class="experience-sub-title project-title">Serotonina</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/JulioCarHol/Serotonina'">
-            Github
-          </button>
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://juliocarhol.github.io/Serotonina/'">
-            Live Demo
-          </button>
-        </div>
-      </div>
 
-      <div class="details-container color-container">
-        <div class="project-gallery">
-          <div class="gallery-container">
-            <img src="./assets/RestauranteJuls/1.png" alt="Restaurante Juls - Página de Inicio" class="project-img" />
-            <img src="./assets/RestauranteJuls/2.png" alt="Restaurante Juls - Menú de Platos" class="project-img" />
-            <img src="./assets/RestauranteJuls/3.png" alt="Restaurante Juls - Carrito de Compras" class="project-img" />
-            <img src="./assets/RestauranteJuls/4.png" alt="Restaurante Juls - Proceso de Pedido" class="project-img" />
-            <img src="./assets/RestauranteJuls/5.png" alt="Restaurante Juls - Información del Restaurante"
-              class="project-img" />
-            <img src="./assets/RestauranteJuls/6.png" alt="Restaurante Juls - Contacto y Ubicación"
-              class="project-img" />
-          </div>
-          <div class="gallery-navigation">
-            <button class="gallery-btn prev-btn" onclick="changeImage(1, -1)">❮</button>
-            <div class="gallery-dots">
-              <span class="dot active" onclick="currentImage(1, 1)"></span>
-              <span class="dot" onclick="currentImage(1, 2)"></span>
-              <span class="dot" onclick="currentImage(1, 3)"></span>
-              <span class="dot" onclick="currentImage(1, 4)"></span>
-              <span class="dot" onclick="currentImage(1, 5)"></span>
-              <span class="dot" onclick="currentImage(1, 6)"></span>
-              <span class="dot" onclick="currentImage(1, 7)"></span>
-            </div>
-            <button class="gallery-btn next-btn" onclick="changeImage(1, 1)">❯</button>
-          </div>
-        </div>
-        <p class="projectslanguages">HTML-SCSS-JS-JQUERY</p>
-        <h2 class="experience-sub-title project-title">Restaurante Juls</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/JulioCarHol/Ecommerce-Restaurante'">
-            Github
-          </button>
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://juliocarhol.github.io/Ecommerce-Restaurante/'">
-            Live Demo
-          </button>
-        </div>
-      </div>
-
-      <div class="details-container color-container">
-        <div class="project-gallery">
-          <div class="gallery-container">
-            <img src="./assets/JulJobs/1.png" alt="JobJuls - Dashboard Principal" class="project-img" />
-            <img src="./assets/JulJobs/2.png" alt="JobJuls - Panel de Control" class="project-img" />
-            <img src="./assets/JulJobs/3.png" alt="JobJuls - Gestión de Usuarios" class="project-img" />
-            <img src="./assets/JulJobs/4.png" alt="JobJuls - Lista de Ofertas" class="project-img" />
-            <img src="./assets/JulJobs/5.png" alt="JobJuls - Perfil de Usuario" class="project-img" />
-            <img src="./assets/JulJobs/6.png" alt="JobJuls - Búsqueda Avanzada" class="project-img" />
-            <img src="./assets/JulJobs/7.png" alt="JobJuls - Configuraciones" class="project-img" />
-            <img src="./assets/JulJobs/8.png" alt="JobJuls - Estadísticas" class="project-img" />
-            <img src="./assets/JulJobs/9.png" alt="JobJuls - Reportes" class="project-img" />
-            <img src="./assets/JulJobs/10.png" alt="JobJuls - Gestión de Empresas" class="project-img" />
-            <img src="./assets/JulJobs/11.png" alt="JobJuls - Panel Administrativo" class="project-img" />
-            <img src="./assets/JulJobs/12.png" alt="JobJuls - Aplicaciones" class="project-img" />
-            <img src="./assets/JulJobs/13.png" alt="JobJuls - Vista Completa" class="project-img" />
-          </div>
-          <div class="gallery-navigation">
-            <button class="gallery-btn prev-btn" onclick="changeImage(2, -1)">❮</button>
-            <div class="gallery-dots">
-              <span class="dot active" onclick="currentImage(2, 1)"></span>
-              <span class="dot" onclick="currentImage(2, 2)"></span>
-              <span class="dot" onclick="currentImage(2, 3)"></span>
-              <span class="dot" onclick="currentImage(2, 4)"></span>
-              <span class="dot" onclick="currentImage(2, 5)"></span>
-              <span class="dot" onclick="currentImage(2, 6)"></span>
-              <span class="dot" onclick="currentImage(2, 7)"></span>
-              <span class="dot" onclick="currentImage(2, 8)"></span>
-              <span class="dot" onclick="currentImage(2, 9)"></span>
-              <span class="dot" onclick="currentImage(2, 10)"></span>
-              <span class="dot" onclick="currentImage(2, 11)"></span>
-              <span class="dot" onclick="currentImage(2, 12)"></span>
-              <span class="dot" onclick="currentImage(2, 13)"></span>
-              <span class="dot" onclick="currentImage(2, 14)"></span>
-            </div>
-            <button class="gallery-btn next-btn" onclick="changeImage(2, 1)">❯</button>
-          </div>
-        </div>
-        <p class="projectslanguages">HTML-CSS-JS-LARAVEL-MYSQL</p>
-        <h2 class="experience-sub-title project-title">JobJuls</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/JulioCarHol/proyecto-bolsajobjuls'">
-            Github
-          </button>
-        </div>
-      </div>
-
-      <div class="details-container color-container">
-        <div class="project-gallery">
-          <div class="gallery-container">
-            <img src="./assets/project-3.jpg" alt="Viajando por Colombia - Vista 1" class="project-img active" />
-            <!-- Agregar más imágenes cuando estén disponibles -->
-          </div>
-          <div class="gallery-navigation">
-            <button class="gallery-btn prev-btn" onclick="changeImage(3, -1)">❮</button>
-            <div class="gallery-dots">
-              <span class="dot active" onclick="currentImage(3, 1)"></span>
-            </div>
-            <button class="gallery-btn next-btn" onclick="changeImage(3, 1)">❯</button>
-          </div>
-        </div>
-        <p class="projectslanguages">REACT-JAVASCRIPT-NODE-MONGODB</p>
-        <h2 class="experience-sub-title project-title">Viajando por Colombia</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/JulioCarHol/TransportesJul-SENA'">
-            Github
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <div>
-
-
-  </div>
-  <section id="contact" class="contact">
-    <h1 class="title">Contáctame</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p>
-          <a href="mailto:juliocardenas_003@hotmail.com">juliocardenas_003@hotmail.com</a>
-        </p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p>
-          <a href="https://www.linkedin.com/in/juliocardenash/">LinkedIn</a>
-        </p>
-      </div>
-    </div>
-
-    </div>
-  </section>
-
-
-
-
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#experience">Habilidades</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p>Hecho por Julio Cardenas</p>
-  </footer>
-
-  <!-- Modal para imagen completa -->
-  <div id="imageModal" class="image-modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <button class="modal-navigation modal-prev">❮</button>
-      <img id="modalImage" class="modal-image" src="" alt="Imagen ampliada">
-      <button class="modal-navigation modal-next">❯</button>
-      <div class="modal-info">
-        <p id="modalInfo">Información de la imagen</p>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
